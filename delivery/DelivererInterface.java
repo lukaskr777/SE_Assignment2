@@ -1,4 +1,4 @@
-package Deliveries;
+package delivery;
 
 public interface DelivererInterface {
     
