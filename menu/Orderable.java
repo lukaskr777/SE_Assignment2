@@ -1,4 +1,4 @@
-package menu.items;
+package menu;
 
 public interface Orderable {
 	public double getPrice();

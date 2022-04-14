@@ -1,4 +1,4 @@
-package menu.items;
+package menu;
 
 public class Ingredient {
 	
