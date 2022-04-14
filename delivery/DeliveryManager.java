@@ -16,6 +16,10 @@ public class DeliveryManager {
         deliverers.add(d);
     }
     
+    public void deleteDeliverer(DelivererInterface d){
+        deliverers.remove(d);
+    }
+    
     public boolean addDeliveryOrder(int order_id, String address){
 
         DelivererInterface d = findFreeDeliverer();
