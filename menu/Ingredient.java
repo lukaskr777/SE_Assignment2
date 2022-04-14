@@ -1,4 +1,8 @@
+<<<<<<< HEAD:main/menu/Ingredient.java
 package menu;
+=======
+package main.menu.items;
+>>>>>>> 9988973579e8bb04ca709cb7ca50f37b1b0f3248:menu/items/Ingredient.java
 
 public class Ingredient {
 	

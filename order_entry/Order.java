@@ -1,4 +1,8 @@
+<<<<<<< HEAD:order_entry/Order.java
 package order_entry;
+=======
+package order.entry;
+>>>>>>> 9988973579e8bb04ca709cb7ca50f37b1b0f3248:order/entry/Order.java
 
 import java.util.ArrayList;
 import menu.Orderable;
