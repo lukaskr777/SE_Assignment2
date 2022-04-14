@@ -1,17 +1,16 @@
 
-<<<<<<< HEAD:order_entry/OrderAPI.java
 package order_entry;
-=======
-package order.entry;
->>>>>>> 9988973579e8bb04ca709cb7ca50f37b1b0f3248:order/entry/OrderAPI.java
 
 import java.util.ArrayList;
+
+import menu.MainMenu;
 import menu.Orderable;
 import delivery.DeliveryManager;
 
 public class OrderAPI{
     Kitchen kitchen;
     DeliveryManager manager;
+    MainMenu menu;
 
     public OrderAPI(Kitchen kitchen){
         this.kitchen = kitchen;
@@ -39,6 +38,16 @@ public class OrderAPI{
 
         kitchen.enqueOrder(o);
 
+    }
+
+    public MainMenu getDeliveryMenu(){
+        menu.setPriceMode(MainMenu.PRICE_MODE.DELIVERY);
+        return menu;
+    }
+
+    public MainMenu getInRestaurantMenu(){
+        menu.setPriceMode(MainMenu.PRICE_MODE.IN_RESTAURANT);
+        return menu;
     }
 
 
