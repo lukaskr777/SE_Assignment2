@@ -1,4 +1,4 @@
-package OrderEntry;
+package order.entry;
 
 import java.util.ArrayList;
 

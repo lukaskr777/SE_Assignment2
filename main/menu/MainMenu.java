@@ -1,8 +1,8 @@
 package main.menu;
 import java.util.ArrayList;
 
-import menu.items.Ingredient;
-import menu.items.Item;
+import main.menu.items.Ingredient;
+import main.menu.items.Item;
 
 public class MainMenu {
 	

@@ -1,4 +1,4 @@
-package OrderEntry;
+package order.entry;
 
 public class DeliveryOrder extends Order {
     
