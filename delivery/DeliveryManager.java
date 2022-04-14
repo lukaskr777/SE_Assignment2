@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class DeliveryManager {
 
 
-    ArrayList<DelivererInterface> deliverers;
+    private ArrayList<DelivererInterface> deliverers;
 
 
     public DeliveryManager(){
