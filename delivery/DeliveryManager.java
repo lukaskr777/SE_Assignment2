@@ -9,27 +9,32 @@ public class DeliveryManager {
 
 
     public DeliveryManager(){
-        deliverers = new ArrayList<>(3);
+        deliverers = new ArrayList<>();
     }
 
     public void addDeliverer(DelivererInterface d){
         deliverers.add(d);
     }
     
-    public void addDelivery(int order_id, String address){
+    public boolean addDeliveryOrder(int order_id, String address){
 
         DelivererInterface d = findFreeDeliverer();
-        d.requestDelivery(order_id, address);
+        
+        if(d!=null) {
+        	d.sendOrderToDeliverer(order_id, address);
+        	return true;
+        }
+        return false;
 
     }
 
     public DelivererInterface findFreeDeliverer(){
         DelivererInterface best = deliverers.get(0);
-        int min = best.activeDeliveries();
+        int min = best.getNumberOfActiveDeliveries();
 
         for(DelivererInterface d : deliverers){
-            if(d.activeDeliveries() < min){
-                min= d.activeDeliveries();
+            if(d.getNumberOfActiveDeliveries() < min){
+                min= d.getNumberOfActiveDeliveries();
                 best= d;
             }
         }
