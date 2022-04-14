@@ -5,29 +5,29 @@ import java.util.ArrayList;
 public class DeliveryManager {
 
 
-    ArrayList<Deliverer> deliverers;
+    ArrayList<DelivererInterface> deliverers;
 
 
     public DeliveryManager(){
         deliverers = new ArrayList<>(3);
     }
 
-    public void addDeliverer(Deliverer d){
+    public void addDeliverer(DelivererInterface d){
         deliverers.add(d);
     }
     
     public void addDelivery(int order_id, String address){
 
-        Deliverer d = findFreeDeliverer();
+        DelivererInterface d = findFreeDeliverer();
         d.requestDelivery(order_id, address);
 
     }
 
-    public Deliverer findFreeDeliverer(){
-        Deliverer best = deliverers.get(0);
+    public DelivererInterface findFreeDeliverer(){
+        DelivererInterface best = deliverers.get(0);
         int min = best.activeDeliveries();
 
-        for(Deliverer d : deliverers){
+        for(DelivererInterface d : deliverers){
             if(d.activeDeliveries() < min){
                 min= d.activeDeliveries();
                 best= d;
