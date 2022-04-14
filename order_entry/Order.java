@@ -9,7 +9,7 @@ public abstract class Order {
 
     protected int order_id;
 
-    ArrayList<Orderable> items;
+    private ArrayList<Orderable> items;
 
     public Order(){
         order_id = id++;

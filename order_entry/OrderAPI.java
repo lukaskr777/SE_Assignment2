@@ -8,9 +8,9 @@ import menu.Orderable;
 import delivery.DeliveryManager;
 
 public class OrderAPI{
-    Kitchen kitchen;
-    DeliveryManager manager;
-    MainMenu menu;
+    private Kitchen kitchen;
+    private DeliveryManager manager;
+    private MainMenu menu;
 
     public OrderAPI(Kitchen kitchen){
         this.kitchen = kitchen;

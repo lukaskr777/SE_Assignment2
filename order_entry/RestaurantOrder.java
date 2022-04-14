@@ -10,7 +10,5 @@ public class RestaurantOrder extends Order{
         return "restaurant order; table: " + table;
     }
 
-    int table;
-
-    
+    private int table;
 }
