@@ -1,0 +1,39 @@
+package Deliveries;
+
+import java.util.ArrayList;
+
+public class DeliveryManager {
+
+
+    ArrayList<Deliverer> deliverers;
+
+
+    public DeliveryManager(){
+        deliverers = new ArrayList<>(3);
+    }
+
+    public void addDeliverer(Deliverer d){
+        deliverers.add(d);
+    }
+    
+    public void addDelivery(int order_id, String address){
+
+        Deliverer d = findFreeDeliverer();
+        d.requestDelivery(order_id, address);
+
+    }
+
+    public Deliverer findFreeDeliverer(){
+        Deliverer best = deliverers.get(0);
+        int min = best.activeDeliveries();
+
+        for(Deliverer d : deliverers){
+            if(d.activeDeliveries() < min){
+                min= d.activeDeliveries();
+                best= d;
+            }
+        }
+        return best;
+    }
+    
+}
