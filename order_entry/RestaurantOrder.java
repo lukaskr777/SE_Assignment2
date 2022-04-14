@@ -1,4 +1,4 @@
-package OrderEntry;
+package order_entry;
 
 public class RestaurantOrder extends Order{
 

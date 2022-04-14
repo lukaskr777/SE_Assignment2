@@ -1,4 +1,4 @@
-package OrderEntry;
+package order_entry;
 
 public class ExternalOrder extends Order {
 

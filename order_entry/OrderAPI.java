@@ -3,8 +3,7 @@ package order_entry;
 
 import java.util.ArrayList;
 import menu.Orderable;
-
-import Deliveries.DeliveryManager;
+import delivery.DeliveryManager;
 
 public class OrderAPI{
     Kitchen kitchen;

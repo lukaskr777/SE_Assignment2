@@ -1,4 +1,4 @@
-package menu.items;
+package menu;
 import java.util.ArrayList;
 
 public class Item implements Orderable{
