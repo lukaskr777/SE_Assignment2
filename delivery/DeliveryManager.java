@@ -32,7 +32,7 @@ public class DeliveryManager {
 
     }
 
-    public DelivererInterface findFreeDeliverer(){
+    private DelivererInterface findFreeDeliverer(){
         DelivererInterface best = deliverers.get(0);
         int min = best.getNumberOfActiveOrders();
 
