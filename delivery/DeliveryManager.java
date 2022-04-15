@@ -34,11 +34,11 @@ public class DeliveryManager {
 
     public DelivererInterface findFreeDeliverer(){
         DelivererInterface best = deliverers.get(0);
-        int min = best.getNumberOfActiveDeliveries();
+        int min = best.getNumberOfActiveOrders();
 
         for(DelivererInterface d : deliverers){
-            if(d.getNumberOfActiveDeliveries() < min){
-                min= d.getNumberOfActiveDeliveries();
+            if(d.getNumberOfActiveOrders() < min){
+                min= d.getNumberOfActiveOrders();
                 best= d;
             }
         }

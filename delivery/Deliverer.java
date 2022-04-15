@@ -16,7 +16,7 @@ public class Deliverer implements DelivererInterface {
 
     }
 
-    public int getNumberOfActiveDeliveries(){
+    public int getNumberOfActiveOrders(){
         return to_deliver.size();
     }
 

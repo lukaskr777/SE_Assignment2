@@ -8,20 +8,38 @@ import java.util.ArrayList;
 
 public class MainMenu {
 
-	public enum PRICE_MODE{DELIVERY,IN_RESTAURANT};
-	
-	
-	private PriceStrategy price_strategy;
+	private ArrayList<PriceStrategy> priceStrategyList;
 	private ArrayList<String> categoryList;
 	private ArrayList<Item> itemList;
 	
 	public MainMenu() {
 		categoryList = new ArrayList<>();
 		itemList = new ArrayList<>();
+		priceStrategyList = new ArrayList<>();
 	}
-
-	public void setPriceMode(PRICE_MODE mode){
-		price_strategy.setStrategy(mode);
+	
+	public void addPriceStrategy(PriceStrategy priceStrategy) {
+		priceStrategyList.add(priceStrategy);
+	}
+	
+	public void removePriceStrategy(PriceStrategy priceStrategy) {
+		priceStrategyList.remove(priceStrategy);
+	}
+	
+	public double getPrice() {
+		double price = 0;
+		
+		for(Item item : itemList) {
+			price += item.getPrice();
+		}
+		
+		for(PriceStrategy priceStrategy	: priceStrategyList) {
+			if(priceStrategy.checkIfApply()) {
+				price = priceStrategy.calculatePrice(price);
+			}
+		}
+		
+		return price;
 	}
 	
 	public ArrayList<String> getCategories(){
