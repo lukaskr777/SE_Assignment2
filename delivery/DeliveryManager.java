@@ -37,7 +37,10 @@ public class DeliveryManager {
 
     }
 
+<<<<<<< HEAD
     // finds the most suitable deliverer
+=======
+>>>>>>> a40e5bfa26fe7740effbb492247b501da408de82
     private DelivererInterface findFreeDeliverer(){
         DelivererInterface best = deliverers.get(0);
         int min = best.getNumberOfActiveOrders();
