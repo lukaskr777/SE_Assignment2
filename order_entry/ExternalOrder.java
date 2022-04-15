@@ -3,7 +3,7 @@ package order_entry;
 public class ExternalOrder extends Order {
 
 
-    String orderer;
+    private String orderer;
 
     public ExternalOrder(String orderer){
         this.orderer = orderer;

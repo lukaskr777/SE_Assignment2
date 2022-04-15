@@ -2,7 +2,7 @@ package order_entry;
 
 public class DeliveryOrder extends Order {
     
-    String address;
+    private String address;
 
     public DeliveryOrder(String address){
         this.address =address;
@@ -11,4 +11,5 @@ public class DeliveryOrder extends Order {
     public String display(){
         return "delivery order; address: " + address;
     }
+
 }

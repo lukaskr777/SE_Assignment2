@@ -15,13 +15,20 @@ public class MainMenu {
 	private ArrayList<String> categoryList;
 	private ArrayList<Item> itemList;
 	
-	public MainMenu() {
+	public MainMenu(PriceStrategy price_strategy) {
 		categoryList = new ArrayList<>();
 		itemList = new ArrayList<>();
+		this.price_strategy = price_strategy;
 	}
 
+	// menu prices change based on wether the customer orders in restaurant or delivery
 	public void setPriceMode(PRICE_MODE mode){
-		price_strategy.setStrategy(mode);
+		price_strategy.setPriceMode(mode);
+	}
+
+	// when restaurant wishes to change price strategy
+	public void setPriceStrategy(PriceStrategy strategy){
+		this.price_strategy = strategy;
 	}
 	
 	public ArrayList<String> getCategories(){

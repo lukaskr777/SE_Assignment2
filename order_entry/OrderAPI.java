@@ -8,12 +8,14 @@ import menu.Orderable;
 import delivery.DeliveryManager;
 
 public class OrderAPI{
-    Kitchen kitchen;
-    DeliveryManager manager;
-    MainMenu menu;
+    private Kitchen kitchen;
+    private DeliveryManager manager;
+    private MainMenu menu;
 
-    public OrderAPI(Kitchen kitchen){
+    public OrderAPI(Kitchen kitchen, DeliveryManager manager, MainMenu menu){
         this.kitchen = kitchen;
+        this.manager = manager;
+        this.menu = menu;
     }
 
     public void inRestaurantOrder(ArrayList<Orderable> items, int table){
