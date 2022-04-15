@@ -18,7 +18,7 @@ public abstract class Order {
     }
 
     // Order will be set a price
-    public double setPrice(double price){
+    public void setPrice(double price){
         this.final_price = price;
     }
 

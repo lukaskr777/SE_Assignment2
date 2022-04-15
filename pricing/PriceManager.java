@@ -12,7 +12,8 @@ public class PriceManager {
     private ArrayList<PriceStrategy> delivery_strategies;
 
     public PriceManager(){
-        strategies = new ArrayList<PriceStrategy>();
+        in_restaurant_strategies = new ArrayList<PriceStrategy>();
+        delivery_strategies = new ArrayList<PriceStrategy>();
     }
 
     // add strategy to in restaurant strategies
