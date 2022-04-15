@@ -13,6 +13,7 @@ public class MainMenu {
 	private ArrayList<Item> itemList;
 	private ArrayList<String> discounts;
 	
+	// constructor for a new restaurant menu
 	public MainMenu(PriceStrategy price_strategy) {
 		categoryList = new ArrayList<>();
 		itemList = new ArrayList<>();
