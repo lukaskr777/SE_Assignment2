@@ -41,6 +41,10 @@ public class Item implements Orderable{
 		}
 	}
 	
+	public ArrayList<Ingredient> getIngredientsList() {
+		return incredintsList;
+	}
+	
 	@Override
 	public double getPrice() {
 		double sum = 0;
@@ -50,8 +54,13 @@ public class Item implements Orderable{
 		return sum;
 	}
 	
-	public ArrayList<Ingredient> getIngredientsList() {
-		return incredintsList;
+	@Override
+	public void setPrice(Ingredient ingredient, double newPrice) {
+		for(Ingredient currentIngredient : incredintsList) {
+			if(currentIngredient.equals(ingredient)) {
+				currentIngredient.setPrice(newPrice);
+			}
+		}
 	}
 	
 	private String getIngredients() {
@@ -62,18 +71,9 @@ public class Item implements Orderable{
 		return ingredients;
 	}
 	
-	public String toString() {
+	public String getDescription() {
 		String result = "Name: " + name + "\n\n" + getIngredients();		
 		return result;
-	}
-
-	@Override
-	public void setPrice(Ingredient ingredient, double newPrice) {
-		for(Ingredient currentIngredient : incredintsList) {
-			if(currentIngredient.equals(ingredient)) {
-				currentIngredient.setPrice(newPrice);
-			}
-		}
 	}
 	
 }
