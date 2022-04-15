@@ -7,32 +7,43 @@ public class Item implements Orderable{
 	private String name;
 	private ArrayList<Ingredient> incredintsList;
 	
+	// Item is an edible item in  menu
 	public Item(String name, String category) {
 		this.name = name;
 		incredintsList = new ArrayList<>();
 		this.category = category;
 	}
 	
+	// set name of item
 	public void setName(String newName) {
 		name = newName;
 	}
 	
+
+	// get name of item
 	public String getName() {
 		return name;
 	}
 	
+	// set items category (for example main dish)
 	public void setCategory(String newCategory) {
 		category = newCategory;
 	}
 	
+
+	// return items category
 	public String getCategory() {
 		return category;
 	}
 	
+
+	// add ingrdient to the item (we can for example add black pepper)
 	public void addIncredient(Ingredient incredient) {
 		incredintsList.add(incredient);
 	}
 	
+
+	// remove unwanted ingredient
 	public void deleteIncredient(Ingredient incredient) {
 		for(Ingredient i : incredintsList) {
 			if(i.equals(incredient)) {
@@ -41,6 +52,7 @@ public class Item implements Orderable{
 		}
 	}
 	
+	// calculate the default price of item
 	@Override
 	public double getPrice() {
 		double sum = 0;
@@ -50,21 +62,9 @@ public class Item implements Orderable{
 		return sum;
 	}
 	
+	// return all ingredients
 	public ArrayList<Ingredient> getIngredientsList() {
 		return incredintsList;
-	}
-	
-	private String getIngredients() {
-		String ingredients = "";
-		for(Ingredient i : incredintsList) {
-			ingredients+= "Ingredient: " + i.getName() + ", price: " + i.getPrice() + "\n";
-		}
-		return ingredients;
-	}
-	
-	public String toString() {
-		String result = "Name: " + name + "\n\n" + getIngredients();		
-		return result;
 	}
 
 	@Override

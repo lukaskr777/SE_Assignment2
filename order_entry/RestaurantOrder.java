@@ -6,11 +6,16 @@ public class RestaurantOrder extends Order{
         this.table = table;
     }
 
+    // return a string that describes the order
     public String display(){
         return "restaurant order; table: " + table;
     }
 
-    int table;
+    // notifies the waiter
+    public void notifyOrderer(){
 
-    
+    }
+
+    // which table ordered this order
+    private int table;
 }
