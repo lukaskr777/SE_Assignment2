@@ -52,14 +52,7 @@ public class Item implements Orderable{
 		}
 	}
 	
-<<<<<<< HEAD
 	// calculate the default price of item
-=======
-	public ArrayList<Ingredient> getIngredientsList() {
-		return incredintsList;
-	}
-	
->>>>>>> a40e5bfa26fe7740effbb492247b501da408de82
 	@Override
 	public double getPrice() {
 		double sum = 0;
@@ -69,41 +62,8 @@ public class Item implements Orderable{
 		return sum;
 	}
 	
-<<<<<<< HEAD
 	// return all ingredients
 	public ArrayList<Ingredient> getIngredientsList() {
 		return incredintsList;
 	}
-
-	@Override
-	public void setPrice(Ingredient ingredient, double newPrice) {
-		for(Ingredient currentIngredient : incredintsList) {
-			if(currentIngredient.equals(ingredient)) {
-				currentIngredient.setPrice(newPrice);
-			}
-		}
-=======
-	@Override
-	public void setPrice(Ingredient ingredient, double newPrice) {
-		for(Ingredient currentIngredient : incredintsList) {
-			if(currentIngredient.equals(ingredient)) {
-				currentIngredient.setPrice(newPrice);
-			}
-		}
-	}
-	
-	private String getIngredients() {
-		String ingredients = "";
-		for(Ingredient i : incredintsList) {
-			ingredients+= "Ingredient: " + i.getName() + ", price: " + i.getPrice() + "\n";
-		}
-		return ingredients;
-	}
-	
-	public String getDescription() {
-		String result = "Name: " + name + "\n\n" + getIngredients();		
-		return result;
->>>>>>> a40e5bfa26fe7740effbb492247b501da408de82
-	}
-	
 }
