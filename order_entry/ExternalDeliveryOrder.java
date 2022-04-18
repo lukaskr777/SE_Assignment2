@@ -6,7 +6,7 @@ public class ExternalOrder extends Order {
 
     private String orderer;
 
-    public ExternalOrder(String orderer){
+    public ExternalDeliveryOrder(String orderer){
         this.orderer = orderer;
     }
 
