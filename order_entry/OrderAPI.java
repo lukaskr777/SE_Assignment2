@@ -34,7 +34,7 @@ public class OrderAPI{
 
     // ordering for home delivery
     public void homeDeliveryOrder(ArrayList<Orderable> items, String address,PaymentInterface payment){
-        DeliveryOrder o = new DeliveryOrder(address);   
+        InternalDeliveryOrder o = new InternalDeliveryOrder(address);   
         o.addItems(items);
         o.setPrice(price_manager.getDeliveryPrice(items));
         payment.pay(o.getPrice());
@@ -46,7 +46,7 @@ public class OrderAPI{
 
     // external company order (Uber eats)
     public void externalOrder(ArrayList<Orderable> items, String orderer,PaymentInterface payment){
-        ExternalOrder o = new ExternalOrder(orderer);
+        ExternalDeliveryOrder o = new ExternalDeliveryOrder(orderer);
         o.addItems(items);
         o.setPrice(price_manager.getDeliveryPrice(items));
         payment.pay(o.getPrice());

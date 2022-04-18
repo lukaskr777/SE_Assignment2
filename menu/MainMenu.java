@@ -6,9 +6,8 @@ import pricing.PriceStrategy;
 
 import java.util.ArrayList;
 
-
+// Main Menu of Restaurant
 public class MainMenu {
-
 
 	private ArrayList<String> categoryList;
 	private ArrayList<Item> itemList;
@@ -21,31 +20,37 @@ public class MainMenu {
 
 	}
 	
-	
+	// get categories from the menu
 	public ArrayList<String> getCategories(){
 		return categoryList;
 	}
 	
+	// add a new category to the menu
 	public void addCategory(String newCategory) {
 		categoryList.add(newCategory);
 	}
-
+	
+	// add discount to menu
 	public void addDiscount(String discount){
 		discounts.add(discount);
 	}
-
+	
+	// remove discount from a menu
 	public void removeDiscount(String discount){
 		discounts.remove(discount);
 	}
 	
+	// get all the items from the menu
 	public ArrayList<Item> getItems(){
 		return itemList;
 	}
 	
+	// add a new item to the menu
 	public void addItem(Item newItem) {
 		itemList.add(newItem);
 	}
 	
+	// displays the menu
 	public String display() {
 		String result = "------------ Menu ------------\n\n";
 		for(String category: categoryList) {
