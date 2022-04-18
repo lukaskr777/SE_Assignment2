@@ -1,7 +1,7 @@
 package order_entry;
 
 // Order that is for external company (Uber eats)
-public class ExternalOrder extends Order {
+public class ExternalDeliveryOrder extends Order {
 
 
     private String orderer;
