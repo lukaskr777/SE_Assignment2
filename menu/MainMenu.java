@@ -14,7 +14,7 @@ public class MainMenu {
 	private ArrayList<Item> itemList;
 	private ArrayList<String> discounts;
 	
-	public MainMenu(PriceStrategy price_strategy) {
+	public MainMenu() {
 		categoryList = new ArrayList<>();
 		itemList = new ArrayList<>();
 		discounts = new ArrayList<>();
@@ -57,7 +57,7 @@ public class MainMenu {
 			}
 		}
 		result += "DISCOUNTS\n";
-		for(String discount){
+		for(String discount : discounts){
 			result += discount + ", \n";
 		}
 		return result;

@@ -38,13 +38,13 @@ public class Item implements Orderable{
 	
 
 	// add ingrdient to the item (we can for example add black pepper)
-	public void addIncredient(Ingredient incredient) {
+	public void addIngredient(Ingredient incredient) {
 		incredintsList.add(incredient);
 	}
 	
 
 	// remove unwanted ingredient
-	public void deleteIncredient(Ingredient incredient) {
+	public void deleteIngredient(Ingredient incredient) {
 		for(Ingredient i : incredintsList) {
 			if(i.equals(incredient)) {
 				incredintsList.remove(i);

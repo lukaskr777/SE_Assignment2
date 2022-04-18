@@ -23,7 +23,7 @@ public class PriceManager {
 
     // add strategy to delivery strategies
     public void addDeliveryStrategy(PriceStrategy strategy){
-        delivery_strategies.add(strategy)
+        delivery_strategies.add(strategy);
     }
 
     //remove strategy from in restaurant strategies
@@ -73,7 +73,7 @@ public class PriceManager {
             s += "\n";
         }
 
-        String s += "\nActive Delivery Strategies: \n";
+        s += "\nActive Delivery Strategies: \n";
         for(int i = 0; i != delivery_strategies.size(); ++i){
             s += delivery_strategies.get(i).display() + ", index: " + i;
             s += "\n";
