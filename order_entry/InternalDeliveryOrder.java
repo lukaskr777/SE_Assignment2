@@ -1,11 +1,11 @@
 package order_entry;
 
 // Order that has to be delivered by the restaurent to home
-public class DeliveryOrder extends Order {
+public class InternalDeliveryOrder extends Order {
     
     private String address, deliverer_contact;
 
-    public DeliveryOrder(String address){
+    public InternalDeliveryOrder(String address){
         this.address =address;
     }
 
